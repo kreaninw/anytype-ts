@@ -33,6 +33,8 @@ const csp = [
 	`worker-src 'self' 'unsafe-eval' blob: http://localhost:*`,
 ];
 
+app.commandLine.appendSwitch('enable-features', 'UseOzonePlatform,WaylandWindowDecorations');
+app.commandLine.appendSwitch('ozone-platform-hint', 'auto');
 app.commandLine.appendSwitch('ignore-connections-limit', 'localhost, 127.0.0.1');
 app.removeAsDefaultProtocolClient(protocol);
 
